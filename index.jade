@@ -1,0 +1,28 @@
+doctype html
+html(ng-app='miniRouting')
+    head
+        title Mini Routing
+        link(href='styles/main.css' rel='stylesheet')
+    body
+        .menu
+            ul
+                li 
+                    a(href='#/') Home
+                li Products
+                    ul
+                        li
+                            a(href='#/products/shoes') Shoes
+                        li
+                            a(href='#/products/socks') Socks
+                li
+                    a(href='#/settings') Settings
+        .view-container
+            ng-view
+    
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-route.min.js')
+        script(src='scripts/app.js')
+        script(src='scripts/home/homeCtrl.js')
+        script(src='scripts/products/productsCtrl.js')
+        script(src='scripts/products/productsService.js')
+        script(src='scripts/settings/settingsCtrl.js')
